@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MYCITY - Explore Your City</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #f0f4f8;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .container {
+            flex: 1;
+        }
+
+        h2.city-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+            color: #002e72;
+        }
+
+        .landmark {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .l1 {
+            color: rgb(101, 209, 255);
+            font-family: 'Verdana';
+        }
+
+        .l2 {
+            color: #498562;
+            font-family: 'Verdana';
+        }
+
+        .l3 {
+            color: #9b59b6;
+            font-family: 'Verdana';
+        }
+
+        .l4 {
+            color: #f39c12;
+            font-family: 'Arial';
+        }
+
+        .info-box {
+            display: none;
+            margin-top: 15px;
+        }
+
+        footer {
+            background-color: #0d6efd;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MYCITY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search landmarks..."
+                        aria-label="Search">
+                    <button class="btn btn-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- City Title -->
+    <div class="container text-center">
+        <h2 class="city-title">Welcome to Pune</h2>
+    </div>
+
+    <!-- Landmark Section -->
+    <div class="container my-4">
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4 text-center">
+                <p class="landmark l1">Shaniwar Wada</p>
+                <button class="btn btn-outline-success" onclick="showInfo('info1')">View Info</button>
+                <div id="info1" class="info-box">
+                    <img src="https://www.savaari.com/blog/wp-content/uploads/2022/11/Shaniwaarwada_Pune_11zon.jpg"
+                        class="img-fluid mt-2" alt="Shaniwar Wada">
+                    <p>Shaniwar Wada was the seat of the Peshwas of the Maratha Empire.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 text-center">
+                <p class="landmark l2">Aga Khan Palace</p>
+                <button class="btn btn-outline-success" onclick="showInfo('info2')">View Info</button>
+                <div id="info2" class="info-box">
+                    <img src="https://www.mkgandhi.org/images/agakhan.jpg" class="img-fluid mt-2" alt="Aga Khan Palace">
+                    <p>Built in 1892, this palace played a role in India's freedom movement.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 text-center">
+                <p class="landmark l3">Sinhagad Fort</p>
+                <button class="btn btn-outline-success" onclick="showInfo('info3')">View Info</button>
+                <div id="info3" class="info-box">
+                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/c1/e6/b3.jpg"
+                        class="img-fluid mt-2" alt="Sinhagad Fort">
+                    <p>This historic fort is known for its strategic importance and scenic beauty.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="mb-0">© 2025 MYCITY | Designed with ❤️ for Pune</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Custom Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showInfo(id) {
+            const boxes = document.querySelectorAll('.info-box');
+            boxes.forEach(box => box.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+
+</body>
+
+</html>

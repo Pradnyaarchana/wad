@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Waterfalls in India</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #e6f2ff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    header {
+      background: linear-gradient(to right, #2c8ef0, #3399ff);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .btn-how {
+      margin: 2rem auto;
+      display: block;
+    }
+    footer {
+      background-color: #11161b;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <!-- Brand name -->
+      <a class="navbar-brand" href="#">Indian Waterfalls</a>
+
+      <!-- Toggler for mobile view -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation links and search bar -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#waterfalls">Top Falls</a></li>
+          <li class="nav-item"><a class="nav-link" href="#how">How to Reach</a></li>
+        </ul>
+
+        <!-- Small search bar aligned to the right -->
+        <form class="d-flex ms-auto" style="max-width: 250px;">
+          <input class="form-control form-control-sm me-2" type="search" placeholder="Search falls">
+          <button class="btn btn-sm btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header section with title and subtitle -->
+  <header>
+    <h1>Explore India's Stunning Waterfalls</h1>
+    <p>From lush forests to rocky cliffs – witness the cascading beauty of nature</p>
+  </header>
+
+  <!-- Waterfalls Section -->
+  <div class="container mt-5" id="waterfalls">
+    <h3 class="text-center mb-4">Top Waterfalls to Visit</h3>
+    <div class="row g-4">
+      <!-- Card 1: Dudhsagar Falls -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://vl-prod-static.b-cdn.net/system/images/000/597/375/179c0f0e7a3a2cf9541fedacecb4f759/original/1c8fafbfb7c15c4b2d048b83c5cc6280.jpg?1658137541" class="card-img-top" alt="Dudhsagar Falls">
+          <div class="card-body">
+            <h5 class="card-title">Dudhsagar Falls, Goa</h5>
+            <p class="card-text">One of the tallest waterfalls in India, nestled in the Western Ghats.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Jog Falls -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://www.fabhotels.com/blog/wp-content/uploads/2021/05/jog-falls_600x400.jpg" class="card-img-top" alt="Jog Falls">
+          <div class="card-body">
+            <h5 class="card-title">Jog Falls, Karnataka</h5>
+            <p class="card-text">A majestic segmented waterfall formed by the Sharavathi river.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Nohkalikai Falls -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://viacation.com/wp-content/uploads/2025/01/434921.webp" class="card-img-top" alt="Nohkalikai Falls">
+          <div class="card-body">
+            <h5 class="card-title">Nohkalikai Falls, Meghalaya</h5>
+            <p class="card-text">India’s tallest plunge waterfall located near Cherrapunji.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Button to scroll to 'How to Reach' section -->
+  <button class="btn btn-primary btn-how" onclick="scrollToReach()">How to Reach</button>
+
+  <!-- How to Reach Section -->
+  <div class="container mt-5" id="how">
+    <h3 class="text-center mb-4">How to Reach</h3>
+    <ul>
+      <li><strong>Dudhsagar Falls:</strong> Reach by train to Kulem or by jeep safaris from Goa.</li>
+      <li><strong>Jog Falls:</strong> Accessible from Shimoga via road or train.</li>
+      <li><strong>Nohkalikai Falls:</strong> Nearest airport is Shillong. Taxis and local transport are available.</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Incredible India Waterfalls. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll button script -->
+  <script>
+    function scrollToReach() {
+      document.getElementById("how").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+  <!-- Bootstrap JavaScript bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Portal Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS CDN for responsive and styled UI -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS styling for body, cards, and footer -->
+  <style>
+     html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f4f8;
+  font-family: 'Segoe UI', sans-serif;
+}
+.container {    
+    flex: 1;
+}
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Soft shadow for depth */
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px); /* Card hover effect */
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #0d6efd; /* Blue footer background */
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar (Header Section) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <!-- Branding -->
+      <a class="navbar-brand" href="#">College Portal</a>
+
+      <!-- Mobile toggle button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible Navbar Content -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- Left-side navigation links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
+          <!-- Dropdown menu for more options -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Help</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Contact Us</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+        </ul>
+
+        <!-- Right-side search box -->
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+          <button class="btn btn-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Section -->
+  <div class="container my-5">
+    <div class="row g-4">
+      
+      <!-- Announcements Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-3">
+          <h5>📢 Announcements</h5>
+          <ul>
+            <li>Mid-term exams from 15th May</li>
+            <li>Library closed on 10th May</li>
+            <li>Project deadline: 12th May</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Timetable Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-3">
+          <h5>📅 Timetable</h5>
+          <p>Click below to view your latest class timetable.</p>
+          <a href="#" class="btn btn-outline-primary">View Timetable</a>
+        </div>
+      </div>
+
+      <!-- Student Info Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-3">
+          <h5>👤 Student Info</h5>
+          <p><strong>Name:</strong> John Doe</p>
+          <p><strong>Roll No:</strong> 123456</p>
+          <p><strong>Dept:</strong> Computer Science</p>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-3">
+          <h5>📊 Results</h5>
+          <p>Your semester results are available online now.</p>
+          <a href="#" class="btn btn-outline-success">Check Results</a>
+        </div>
+      </div>
+
+      <!-- Resources Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-3">
+          <h5>📚 Resources</h5>
+          <p>Access e-books, lecture notes, and previous year papers.</p>
+          <a href="#" class="btn btn-outline-secondary">View Resources</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p class="mb-0">© 2025 College Portal. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS for enabling dropdown, toggle etc. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

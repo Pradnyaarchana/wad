@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Departments Grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery Mobile CDN -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        /* Styling for department boxes */
+        .dept-box {
+            background: #3b74c5;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-radius: 10px;
+            margin: 10px ;
+        }
+        /* Styling for buttons */
+        .dept-button {
+            background: #e67327 !important;
+            color: white !important;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        
+        .ui-block-a,
+        .ui-block-b,
+        .ui-block-c,
+        .ui-block-d,
+        .ui-block-e {
+            width: 18%;
+            text-align: center;
+        }  
+
+        .back-button  {
+            padding: 5px 10px !important;
+    font-size: 12px !important;
+    min-width: auto !important;
+    width: auto !important;
+    display: inline-block !important;
+}
+    </style>
+</head>
+<body>
+
+<!-- Main page with grid -->
+<div data-role="page" id="home">
+    <div data-role="header">
+        <h1>Departments</h1>
+    </div>
+
+    <div data-role="content">
+        <!-- Grid with 5 columns -->
+        <div class="ui-grid-d">
+            <!-- IT Department -->
+            <div class="ui-block-a">
+                <div class="dept-box">IT</div>
+                <a href="#it" data-role="button" class="dept-button">Button</a>
+            </div>
+            <!-- COMP Department -->
+            <div class="ui-block-b">
+                <div class="dept-box">COMP</div>
+                <a href="#comp" data-role="button" class="dept-button">Button</a>
+            </div>
+            <!-- ETC Department -->
+            <div class="ui-block-c">
+                <div class="dept-box">ETC</div>
+                <a href="#etc" data-role="button" class="dept-button">Button</a>
+            </div>
+            <!-- MECH Department -->
+            <div class="ui-block-d">
+                <div class="dept-box">MECH</div>
+                <a href="#mech" data-role="button" class="dept-button">Button</a>
+            </div>
+            <!-- ELECT Department -->
+            <div class="ui-block-e">
+                <div class="dept-box">ELECT</div>
+                <a href="#elect" data-role="button" class="dept-button">Button</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- IT Department Info Page -->
+<div data-role="page" id="it">
+    <div data-role="header">
+        <h1>IT Department</h1>
+    </div>
+    <div data-role="content">
+        <p>Information about the IT Department.</p>
+        <a href="#home" data-role="button" class="back-btn">Back</a>
+    </div>
+</div>
+
+<!-- COMP Department Info Page -->
+<div data-role="page" id="comp">
+    <div data-role="header">
+        <h1>COMP Department</h1>
+    </div>
+    <div data-role="content">
+        <p>Information about the COMP Department.</p>
+        <a href="#home" data-role="button">Back</a>
+    </div>
+</div>
+
+<!-- ETC Department Info Page -->
+<div data-role="page" id="etc">
+    <div data-role="header">
+        <h1>ETC Department</h1>
+    </div>
+    <div data-role="content">
+        <p>Information about the ETC Department.</p>
+        <a href="#home" data-role="button">Back</a>
+    </div>
+</div>
+
+<!-- MECH Department Info Page -->
+<div data-role="page" id="mech">
+    <div data-role="header">
+        <h1>MECH Department</h1>
+    </div>
+    <div data-role="content">
+        <p>Information about the MECH Department.</p>
+        <a href="#home" data-role="button">Back</a>
+    </div>
+</div>
+
+<!-- ELECT Department Info Page -->
+<div data-role="page" id="elect">
+    <div data-role="header">
+        <h1>ELECT Department</h1>
+    </div>
+    <div data-role="content">
+        <p>Information about the ELECT Department.</p>
+        <a href="#home" data-role="button">Back</a>
+    </div>
+</div>
+
+</body>
+</html>

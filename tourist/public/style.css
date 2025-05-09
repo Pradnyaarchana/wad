@@ -1,0 +1,26 @@
+body {
+    background: #f2f7fa;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  header, footer {
+    background: #00695c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+  }
+  h2 {
+    color: #004d40;
+    margin-top: 30px;
+  }
+  .carousel img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .place {
+    margin-bottom: 50px;
+  }
+
+  .description{
+    padding: 15px;
+  }

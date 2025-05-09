@@ -1,0 +1,62 @@
+college-admission-api/
+│
+├── server.js
+├── models/
+│   └── Student.js
+├── routes/
+│   └── studentRoutes.js
+├── controllers/
+│   └── studentController.js
+├── config/
+│   └── db.js
+├── package.json
+
+npm init -y
+npm install express mongoose cors body-parser nodemon
+
+
+db.js
+student.js
+studentcontroller.js
+studentroutes.js
+server.js
+
+another terminal 
+	1. net start MongoDB
+
+	3 . mongosh
+		use collegeDB
+		db.students.insertOne({  name: "Alice Johnson",  
+email: "alice@example.com",  
+phone: "9876543210",  
+course: "B.Tech CSE",  
+status: "pending"})
+
+
+
+2 . nodemon server.js
+(get - http://localhost:5000/api/students – Get all students
+put -  http://localhost:5000/api/students/<student_id>
+)
+
+
+
+1️⃣ GET all students
+
+
+curl.exe http://localhost:5000/api/students
+
+create (post)
+curl -Uri http://localhost:5000/students -Method POST -Body '{"name": "Aarti", "email": "aarti@example.com", "phone": "9876543210", "course": "IT", "status": "pending"}' -ContentType "application/json"
+
+
+681d8c1ced96a883296d689f
+
+curl -Uri http://localhost:5000/students/<id> `
+  -Method PUT `
+  -Body '{"name": "Aarti Updated", "email": "aarti@update.com", "phone": "9123456780", "course": "CSE", "status": "approved"}' `
+  -ContentType "application/json"
+
+
+curl -Uri http://localhost:5000/students/<id> -Method DELETE
+

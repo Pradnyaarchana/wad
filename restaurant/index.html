@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- jQuery and jQuery Mobile JS -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .menu-item {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #fdf5e6;
+        }
+        .detail-page img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .detail-page {
+            background-color: #fff8dc;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        a{
+            text-decoration: none;
+            
+        }
+        a h2, p{
+            color: #390000;
+        }
+
+        .menu-item{
+            display: inline-block;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!-- Home Page -->
+<div data-role="page" id="home">
+
+    <div data-role="header" style="background-color: #ff6347; color: white;">
+        <h1>Restaurant Menu</h1>
+    </div>
+
+    <div data-role="content">
+        <div class="menu-item">
+            <a href="#detail1">
+                <img src="https://via.placeholder.com/300x200?text=Pizza" alt="Pizza">
+                <h2>Margherita Pizza</h2>
+                <p>Classic cheese & tomato pizza with fresh basil.</p>
+            </a>
+        </div>
+
+        <div class="menu-item">
+            <a href="#detail2">
+                <img src="https://via.placeholder.com/300x200?text=Burger" alt="Burger">
+                <h2>Beef Burger</h2>
+                <p>Juicy beef patty with cheese, lettuce, and tomato.</p>
+            </a>
+        </div>
+
+        <div class="menu-item">
+            <a href="#detail3">
+                <img src="https://via.placeholder.com/300x200?text=Pasta" alt="Pasta">
+                <h2>Spaghetti Carbonara</h2>
+                <p>Creamy pasta with pancetta and parmesan.</p>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<!-- Detail Page 1 -->
+<div data-role="page" id="detail1">
+
+    <div data-role="header" style="background-color: #ff6347; color: white;">
+        <h1>Margherita Pizza</h1>
+    </div>
+
+    <div data-role="content" class="detail-page">
+        <img src="https://via.placeholder.com/600x400?text=Pizza+Detail" alt="Pizza">
+        <h2>Margherita Pizza</h2>
+        <p>This pizza features a deliciously crispy crust, topped with tangy tomato sauce, gooey mozzarella, and fresh basil leaves.</p>
+        <p><strong>Price:</strong> $12.99</p>
+    </div>
+
+</div>
+
+<!-- Detail Page 2 -->
+<div data-role="page" id="detail2">
+
+    <div data-role="header" style="background-color: #ff6347; color: white;">
+        <h1>Beef Burger</h1>
+    </div>
+
+    <div data-role="content" class="detail-page">
+        <img src="https://via.placeholder.com/600x400?text=Burger+Detail" alt="Burger">
+        <h2>Beef Burger</h2>
+        <p>A classic beef burger served with melted cheese, lettuce, tomato, and our special sauce, all inside a toasted bun.</p>
+        <p><strong>Price:</strong> $10.99</p>
+    </div>
+
+</div>
+
+<!-- Detail Page 3 -->
+<div data-role="page" id="detail3">
+
+    <div data-role="header" style="background-color: #ff6347; color: white;">
+        <h1>Spaghetti Carbonara</h1>
+    </div>
+
+    <div data-role="content" class="detail-page">
+        <img src="https://via.placeholder.com/600x400?text=Pasta+Detail" alt="Pasta">
+        <h2>Spaghetti Carbonara</h2>
+        <p>Enjoy creamy spaghetti tossed with crispy pancetta, parmesan cheese, and a touch of black pepper for a true Italian experience.</p>
+        <p><strong>Price:</strong> $11.49</p>
+    </div>
+
+</div>
+
+</body>
+</html>

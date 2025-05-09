@@ -1,0 +1,179 @@
+git --version
+✅ Step 2: Set up Git (first time only)
+Set your name and email (must match your GitHub account email):
+
+bash
+Copy
+Edit
+git config --global user.name "Your Name"
+git config --global user.email "youremail@example.com"
+Example:
+
+bash
+Copy
+Edit
+git config --global user.name "Pradnya Bagde"
+git config --global user.email "pradnya@example.com"
+✅ Step 3: Create a new repository on GitHub
+1️⃣ Go to your GitHub homepage.
+
+2️⃣ Click the + icon (top right) ➔ New repository.
+
+3️⃣ Give it a name (e.g., my-first-repo).
+
+4️⃣ Keep it Public or Private as you like.
+
+5️⃣ DO NOT check "Initialize with a README" (for clean setup).
+
+6️⃣ Click Create repository.
+
+✅ Step 4: Initialize Git in your project folder
+1️⃣ Go to your project folder (where your code is):
+
+bash
+Copy
+Edit
+cd path/to/your/project
+2️⃣ Initialize Git:
+
+bash
+Copy
+Edit
+git init
+✅ Step 5: Add your files to Git
+You can check which files are there:
+
+bash
+Copy
+Edit
+git status
+Then add all files:
+
+bash
+Copy
+Edit
+git add .
+OR add a specific file:
+
+bash
+Copy
+Edit
+git add filename
+✅ Step 6: Commit your code
+Commit with a message:
+
+bash
+Copy
+Edit
+git commit -m "Initial commit"
+✅ Step 7: Connect your local repo to GitHub
+Copy the repository URL from GitHub.
+Example (HTTPS):
+
+bash
+Copy
+Edit
+https://github.com/YourUsername/my-first-repo.git
+Now set it as remote:
+
+bash
+Copy
+Edit
+git remote add origin https://github.com/YourUsername/my-first-repo.git
+✅ Step 8: Push your code to GitHub
+Push the code:
+
+bash
+Copy
+Edit
+git push -u origin master
+➡️ If your branch name is main (common now):
+
+bash
+Copy
+Edit
+git push -u origin main
+🔑 First time push: Authentication
+If asked for username and password:
+GitHub now doesn’t allow password login for Git. You need a Personal Access Token (PAT) instead of your password.
+
+Generate a PAT:
+Go to Settings ➔ Developer settings ➔ Personal access tokens.
+
+Create a token with repo permissions.
+
+Use your username as normal, and paste the token when asked for a password.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Clone the empty repo from GitHub
+git clone https://github.com/YourUsername/git-demo.git
+cd git-demo
+
+# Add a file
+echo "This is the main branch." > file.txt
+
+# Stage and commit
+git add file.txt
+git commit -m "Add file.txt in main branch"
+
+# Push to GitHub
+git push origin main
+
+
+
+---------
+echo "New line in main branch." >> file.txt
+git add file.txt
+git commit -m "Add a new line in main"
+git push
+-------
+git checkout -b feature-branch
+
+
+echo "This is from feature branch." >> file.txt
+
+
+
+git add file.txt
+git commit -m "Add text from feature branch"
+
+
+
+git push origin feature-branch
+
+
+
+git checkout main
+
+
+
+git merge feature-branch
+
+
+
+git push
+
+Let’s simulate someone else making changes on GitHub.
+
+1️⃣ Go to the repository on GitHub.
+2️⃣ Edit the file.txt file directly in the browser, add a line like:
+This line was added from GitHub website.
+
+git pull
+
+---------------
+git branch -m master main
+

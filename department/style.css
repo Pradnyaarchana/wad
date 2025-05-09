@@ -1,0 +1,46 @@
+/* Global styles */
+body {
+    background: #f1f1f1;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Header and footer */
+  .ui-header, .ui-footer {
+    background-color: #004d40 !important;
+    color: white !important;
+    text-align: center;
+  }
+  
+  /* Grid padding */
+  .ui-grid-d .ui-block-a,
+  .ui-grid-d .ui-block-b,
+  .ui-grid-d .ui-block-c,
+  .ui-grid-d .ui-block-d,
+  .ui-grid-d .ui-block-e {
+    padding: 8px;
+  }
+  
+  /* Department buttons */
+  .dept-btn {
+    background: #009688;
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  
+  .dept-btn:hover {
+    background: #00796b;
+  }
+  
+  /* Department content page */
+  .ui-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+  }
+  

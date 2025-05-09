@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flight Booking Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .flight-card {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .flight-card:hover {
+      transform: translateY(-5px);
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: auto;
+    }
+    .flight-header {
+      background-color: #007bff;
+      color: white;
+      padding: 0.5rem;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+    nav.navbar {
+      background-color: #343a40; /* Match footer color */
+    }
+    nav.navbar .navbar-brand, 
+    nav.navbar .nav-link {
+      color: white; /* White text color for navbar */
+    }
+    nav.navbar .navbar-toggler-icon {
+      background-color: white; /* White color for navbar toggle icon */
+    }
+    nav.navbar .nav-link:hover {
+      color: #0d6efd; /* Optional: Hover effect */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">FlyNow</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Flights</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Bookings</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search flights..." aria-label="Search">
+        <button class="btn btn-light" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Available Flights</h2>
+  <div class="row g-4">
+    
+    <!-- Flight 1 -->
+    <div class="col-md-4">
+      <div class="card flight-card">
+        <div class="flight-header text-center">Mumbai ✈ Delhi</div>
+        <div class="card-body">
+          <p><strong>Flight:</strong> Indigo 6E-101</p>
+          <p><strong>Departure:</strong> 10:00 AM | <strong>Arrival:</strong> 12:00 PM</p>
+          <p><strong>Price:</strong> ₹3,499</p>
+          <button class="btn btn-primary w-100">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flight 2 -->
+    <div class="col-md-4">
+      <div class="card flight-card">
+        <div class="flight-header text-center">Bangalore ✈ Pune</div>
+        <div class="card-body">
+          <p><strong>Flight:</strong> AirAsia I5-202</p>
+          <p><strong>Departure:</strong> 2:30 PM | <strong>Arrival:</strong> 4:45 PM</p>
+          <p><strong>Price:</strong> ₹2,899</p>
+          <button class="btn btn-primary w-100">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flight 3 -->
+    <div class="col-md-4">
+      <div class="card flight-card">
+        <div class="flight-header text-center">Chennai ✈ Kolkata</div>
+        <div class="card-body">
+          <p><strong>Flight:</strong> Vistara UK-303</p>
+          <p><strong>Departure:</strong> 5:15 PM | <strong>Arrival:</strong> 8:00 PM</p>
+          <p><strong>Price:</strong> ₹4,199</p>
+          <button class="btn btn-primary w-100">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 FlyNow Airlines. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

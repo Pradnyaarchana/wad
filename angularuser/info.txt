@@ -1,0 +1,19 @@
+npm install -g @angular/cli
+
+\Prob statements\angularuser> ng new angularuser 
+
+CSS
+Y
+Y
+(
+app.component.html
+app.component.ts
+app.module.ts
+)
+
+cd angular user
+
+npm install
+
+ng serve
+

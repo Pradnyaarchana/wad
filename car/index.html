@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CityCar Rentals</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    /* General body styling */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7fa;
+    }
+
+    /* Header styling */
+    header {
+      height: 45vh; /* Sets header height */
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    }
+    header h1 {
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      animation: fadeIn 2s ease-in-out; /* Animation for header text */
+    }
+
+    /* Card image styling */
+    .card img {
+      height: 200px;
+      object-fit: cover; /* Ensures the image fits the card */
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #212529;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* Spacing for the available cars section */
+    #cars {
+      margin-top: 30px;
+      animation: fadeIn 2s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar Section -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">CityCar Rentals</a>
+    <!-- Hamburger menu for smaller screens -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cars">Cars</a></li>
+        <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
+      </ul>
+      <!-- Search bar -->
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search cars...">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Header Section -->
+<header>
+  <h1>Welcome to CityCar Rentals - Book Your Ride Instantly</h1>
+</header>
+
+<!-- Available Cars Section -->
+<section class="container my-5" id="cars">
+  <h2 class="text-center mb-4">Available Cars</h2>
+  <div class="row g-4">
+    <!-- Sedan Card -->
+    <div class="col-md-4">
+      <div class="card shadow">
+        <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/134287/city-exterior-right-front-three-quarter-78.jpeg?isig=0&q=80" class="card-img-top" alt="Sedan">
+        <div class="card-body">
+          <h5 class="card-title">Sedan - Honda City</h5>
+          <p class="card-text">Comfortable and classy. Perfect for city rides and airport pickups.</p>
+        </div>
+      </div>
+    </div>
+    <!-- SUV Card -->
+    <div class="col-md-4">
+      <div class="card shadow">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/5/416851732/AD/FB/YP/2535618/n3-1000x1000.jpg" class="card-img-top" alt="SUV">
+        <div class="card-body">
+          <h5 class="card-title">SUV - Mahindra XUV</h5>
+          <p class="card-text">Spacious and rugged. Ideal for road trips and family tours.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Hatchback Card -->
+    <div class="col-md-4">
+      <div class="card shadow">
+        <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-front-three-quarter-31.jpeg?isig=0&q=80" class="card-img-top" alt="Hatchback">
+        <div class="card-body">
+          <h5 class="card-title">Hatchback - Maruti Swift</h5>
+          <p class="card-text">Affordable and compact. Great for daily use within the city.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Offers Section -->
+<section class="text-center my-5" id="offers">
+  <h3 class="mb-3">Looking for Discounts?</h3>
+  <button class="btn btn-primary btn-lg" onclick="showOffers()">View Offers & Charges</button>
+</section>
+
+<!-- Offers Modal (hidden by default) -->
+<div class="modal fade" id="offersModal" tabindex="-1" aria-labelledby="offersModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title" id="offersModalLabel">Current Offers & Charges</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <ul>
+          <li><strong>City Rides:</strong> ₹15/km (minimum ₹300)</li>
+          <li><strong>Airport Pickup:</strong> Flat ₹599</li>
+          <li><strong>Weekend Offer:</strong> 10% off on all SUV bookings</li>
+          <li><strong>Monthly Rental Plan:</strong> From ₹12,000/month</li>
+        </ul>
+      </div>
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <button class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Section -->
+<footer>
+  <p>&copy; 2025 CityCar Rentals. Designed for seamless city travel.</p>
+</footer>
+
+<!-- Scripts -->
+<script>
+  // Function to show the Offers modal
+  function showOffers() {
+    const modal = new bootstrap.Modal(document.getElementById('offersModal'));
+    modal.show();
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
